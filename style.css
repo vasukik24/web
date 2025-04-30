@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container, .form-container {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="file"],
+  input[type="number"] {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #2d89ef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #1c5db5;
+  }
+  
