@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my first web</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Xerox Service</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <h1>vasuki</h1>
-   <h1>web</h1>
-   <img width="200px" src="profile.jpg" alt=""> 
-   <p>my project</p>
-   <p>ss</p>
+  <div class="container">
+    <h1>Welcome to Online Xerox Service</h1>
+    <button onclick="showPage('login')">Login</button>
+    <button onclick="showPage('signup')">Sign Up</button>
+  </div>
+
+  <div class="form-container" id="login" style="display:none;">
+    <h2>Login</h2>
+    <input type="text" placeholder="Email" id="loginEmail" />
+    <input type="password" placeholder="Password" id="loginPass" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="form-container" id="signup" style="display:none;">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Email" id="signupEmail" />
+    <input type="password" placeholder="Password" id="signupPass" />
+    <button onclick="signup()">Register</button>
+  </div>
+
+  <div class="form-container" id="print" style="display:none;">
+    <h2>Upload Document to Print</h2>
+    <input type="file" id="fileUpload" />
+    <label>Pages to Print:</label>
+    <input type="number" id="pageCount" min="1" />
+    <label>Copies:</label>
+    <input type="number" id="copyCount" min="1" />
+    <button onclick="calculatePayment()">Proceed to Payment</button>
+  </div>
+
+  <div class="form-container" id="payment" style="display:none;">
+    <h2>Payment</h2>
+    <p id="amountDisplay">Amount: ₹0</p>
+    <button onclick="pay()">Pay Now</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
