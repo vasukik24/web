@@ -42,7 +42,7 @@ function pay() {
   alert("Payment Successful! Document sent for printing.");
   window.location.reload(); // restart app
 }
-let users = {}; // Temporary user store for demo purpose
+let users = JSON.parse(localStorage.getItem('users')) || {};
 let currentUser = null;
 
 function showPage(pageId) {
@@ -99,4 +99,6 @@ function pay() {
   alert("Payment successful! Your documents will be printed.");
   location.reload(); // Reset the app
 }
+localStorage.setItem('users', JSON.stringify(users));
+
 
